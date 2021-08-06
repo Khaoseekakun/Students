@@ -25,8 +25,10 @@ client.on(`message`, async(message) => {
         if(message.channel.id == "872320110080184380" && message.content.includes("เข้าเรียน")){
             var d_time = new Date();
             let time = d_time.getHours();
-            time + 7
-            if(time < 7){
+            let mTime = time + 7
+            console.log("Real Time ", time)
+            console.log("My Time ", mTime)
+            if(mTime < 7){
                 const checkerror = {
                     author: {
                         name: message.author.username,
@@ -37,7 +39,7 @@ client.on(`message`, async(message) => {
                 }
                 message.channel.send({embed:checkerror})
             }
-            else if(time > 9){
+            else if(mTime > 9){
                 const checkerrors = {
                     author: {
                         name: message.author.username,
