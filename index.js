@@ -24,7 +24,8 @@ client.on(`message`, async(message) => {
     if (message.guild) {
         if(message.channel.id == "872320110080184380" && message.content.includes("เข้าเรียน")){
             var d_time = new Date();
-            var time = d_time.getHours();
+            let time = d_time.getHours();
+            time + 7
             if(time < 7){
                 const checkerror = {
                     author: {
